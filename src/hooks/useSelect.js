@@ -1,19 +1,25 @@
 // Custon hook
+import React from "react"
 import { useState } from "react"
 
-const useSelect = ({ initialState, options }) => {
+const useSelect = (initialState, options) => {
     // state del custon hook
-    const [state, setState] = useState('')
+    const [state, setState] = useState(initialState)
 
     const SelectNews = () => (
         <select
             className="browser-default"
+            value={state}
+            onChange={e => setState(e.target.value)}
         >
-            <option
-                value=""
-            >
-                Seleccione
-            </option>
+            {options.map(option => (
+                <option
+                    key={option.value}
+                    value={option.value}
+                >
+                    {option.label}
+                </option>
+            ))}
 
         </select>
     )
