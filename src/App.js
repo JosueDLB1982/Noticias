@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from "react"
 import Header from "./components/Header"
 import Form from "./components/Form";
 import NewsListing from "./components/NewsListing";
+import Footer from "./components/Footer";
 
 function App() {
   // definir la categoria y noticia
@@ -34,6 +35,9 @@ function App() {
           news={news}
         />
       </div>
+      <Footer
+        personalizacion='Josue Lopez - Developer Treinee'
+      />
     </Fragment>
   );
 }

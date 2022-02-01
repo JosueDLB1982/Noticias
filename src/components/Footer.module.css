@@ -1,0 +1,10 @@
+.personalizacion {
+    display: block;
+    text-align: right;
+    color: black;
+    padding: 3rem;
+}
+
+.personalizacion:hover {
+    color: blanchedalmond;
+}
