@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from "react"
 import Header from "./components/Header"
 import Form from "./components/Form";
+import NewsListing from "./components/NewsListing";
 
 function App() {
   // definir la categoria y noticia
@@ -27,6 +28,10 @@ function App() {
       <div className="container white">
         <Form
           setCategory={setCategory}
+        />
+
+        <NewsListing
+          news={news}
         />
       </div>
     </Fragment>
