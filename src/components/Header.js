@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const Header = ({title}) => {
     return (
@@ -6,6 +6,10 @@ const Header = ({title}) => {
             <a href="#!" className="brand-logo center">{title}</a>
         </nav>
     )
+}
+
+Header.propTypes = {
+    title : PropTypes.string.isRequired
 }
 
 export default Header

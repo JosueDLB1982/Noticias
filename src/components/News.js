@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const News = ({ n }) => {
     // Extraer los datos con destructuring
@@ -39,5 +39,10 @@ const News = ({ n }) => {
         </div>
     )
 }
+
+News.propTypes = {
+    n : PropTypes.object.isRequired
+}
+
 
 export default News

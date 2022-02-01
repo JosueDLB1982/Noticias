@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import PropTypes from 'prop-types'
 
 const Footer = ({personalizacion}) => {
   return (
@@ -12,5 +13,10 @@ const Footer = ({personalizacion}) => {
   </a>
   )
 }
+
+Footer.propTypes = {
+  personalizacion : PropTypes.string.isRequired
+}
+
 
 export default Footer

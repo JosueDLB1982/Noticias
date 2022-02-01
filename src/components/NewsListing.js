@@ -1,4 +1,5 @@
 import News from "./News"
+import PropTypes from 'prop-types'
 
 const NewsListing = ({news}) => {
     return (
@@ -11,6 +12,10 @@ const NewsListing = ({news}) => {
             ))}
         </div>
     )
+}
+
+NewsListing.propTypes = {
+    news : PropTypes.array.isRequired
 }
 
 export default NewsListing
