@@ -4,7 +4,10 @@ const NewsListing = ({news}) => {
     return (
         <div className="row">
             {news.map(n => (
-               <News/> 
+               <News
+                    key={n.url}
+                    n={n}
+               /> 
             ))}
         </div>
     )
