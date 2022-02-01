@@ -1,8 +1,11 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Header from "./components/Header"
 import Form from "./components/Form";
 
 function App() {
+  // definir la categoria y noticia
+  const [category, setCategory] = useState('')
+
   return (
     <Fragment>
       <Header
@@ -10,7 +13,9 @@ function App() {
       />
 
       <div className="container white">
-        <Form/>
+        <Form
+          setCategory={setCategory}
+        />
       </div>
     </Fragment>
   );
