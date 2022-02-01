@@ -1,6 +1,11 @@
+import React from 'react'
 import styles from './Form.module.css'
+import useSelect from '../hooks/useSelect'
 
 const Form = () => {
+    // iniciamos nuestro custon hook
+    const [category, SelectNews] = useSelect('')
+
     return (
         <div className={`${styles.buscador} row`}>
             <div className="col s12 m8 offset-m2">
@@ -8,6 +13,8 @@ const Form = () => {
                     <h2 className={styles.heading}>
                         Encuentra Noticias por Categoría
                     </h2>
+
+                    <SelectNews/>
 
                     <div className="input-field col s12">
                         <input
